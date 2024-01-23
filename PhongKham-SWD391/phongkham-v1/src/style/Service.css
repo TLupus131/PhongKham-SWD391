@@ -1,0 +1,63 @@
+.slick-prev {
+    left   : -15px !important;
+    z-index: 100 !important;
+}
+
+.slick-prev::before {
+    line-height: 1.1 !important;
+    color      : #006632 !important;
+    font-size  : 30px;
+}
+
+.slick-next::before {
+    color      : #006632 !important;
+    line-height: 1.1 !important;
+    font-size  : 30px;
+}
+
+.slick-next {
+    right  : -5px !important;
+    z-index: 100 !important;
+}
+
+.section-specialty {
+    height          : 700px;
+    background-color: white;
+    padding         : 0 100px;
+
+    .img-customize1 {
+        border-radius  : 10px;
+        height         : 410px;
+        background-size: cover;
+        width          : 360px;
+    }
+
+    .img-customize2 {
+        border-radius  : 10px;
+        height         : 520px;
+        background-size: cover;
+        width          : 360px;
+    }
+}
+
+.css-1ps6pg7-MuiPaper-root {
+    box-shadow: none !important;
+}
+
+.specialty-content {
+    border: none;
+}
+
+.slick-dots li button:before {
+    font-size: 10px !important;
+    color    : #006632 !important;
+    opacity  : 1 !important;
+}
+
+.iconHolder {
+    background-color: #006632;
+    width           : max-content;
+    color           : white;
+    border-radius   : 50%;
+    padding         : 10px;
+}

@@ -1,0 +1,99 @@
+/* Navbar brand */
+.navbar-brand {
+    font-size      : 20px;
+    font-weight    : bold;
+    text-decoration: none;
+}
+
+/* Navbar links */
+.nav-item {
+    margin-right   : 10px;
+    display        : flex;
+    justify-content: center;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+/* Active link */
+.nav-link.active {
+    color: #ff0000;
+    /* Change to your desired active link color */
+}
+
+/* Responsiveness - collapse Navbar on smaller screens */
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-item {
+        padding-left : 20px;
+        margin-right : 0;
+        margin-bottom: 10px;
+    }
+}
+
+.navbar-nav .nav-link {
+    color      : white !important;
+    white-space: nowrap;
+}
+
+a strong {
+    font-family: 'Roboto', sans-serif;
+    color      : white;
+}
+
+.contact-btn {
+    background-color: rgb(242, 102, 37) !important;
+    color           : white !important;
+    white-space     : nowrap !important;
+    border          : none !important;
+    cursor          : pointer !important;
+    border-radius   : 3px !important;
+    font-weight     : bold !important;
+    font-family     : 'Roboto', sans-serif !important;
+    height          : 36px !important;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+#navbarNav {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: #006632;
+}
+
+.navbar-hide-btn {
+    width           : 55.6px;
+    color           : gray !important;
+    background-color: transparent !important;
+    border          : var(--bs-border-width) solid var(--bs-navbar-toggler-border-color) !important;
+}
+
+.navbar-hide-btn:hover {
+    color           : gray !important;
+    background-color: transparent !important;
+    border          : var(--bs-border-width) solid var(--bs-navbar-toggler-border-color) !important;
+}
+
+/* ... (your existing CSS rules) */
+
+@media (min-width: 992px) {
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-hide-btn {
+        display: none !important;
+    }
+}
+
+.dropdown-toggle::after {
+    vertical-align: 0.155em !important;
+    margin-left   : 0.55em !important;
+}

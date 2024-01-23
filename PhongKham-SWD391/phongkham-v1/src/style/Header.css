@@ -1,0 +1,48 @@
+.header {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-evenly;
+}
+
+.header h3 {
+    margin: 0;
+    color : #006632;
+}
+
+.brand {
+    margin-top   : 10px;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 920px) {
+    .header {
+        display: none;
+    }
+}
+
+.searchBox {
+    display      : flex;
+    cursor       : pointer;
+    height       : 30px;
+    padding      : 10px 10px;
+    background   : white;
+    border-radius: 30px;
+    align-items  : center;
+    box-shadow   : 0px 0px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.searchBox:hover input,
+.searchBox input:valid {
+    width  : 150px;
+    padding: 10px 10px;
+}
+
+.searchBox input {
+    width      : 0;
+    outline    : none;
+    border     : none;
+    font-weight: 500;
+    transition : 0.8s;
+    background : transparent;
+}

@@ -1,0 +1,47 @@
+.movie-carousel-container {
+    width           : 100vw;
+    background-color: white;
+}
+
+.movie-poster {
+    height       : 300px;
+    border       : solid 1px white;
+    border-radius: 20px;
+}
+
+.movie-poster>img {
+    height       : 100%;
+    width        : 100%;
+    border-radius: 20px;
+}
+
+.movie-card-container {
+    height          : 390px;
+    background-color: black;
+    display         : flex;
+    justify-content : center;
+    border          : none;
+}
+
+.movie-card {
+    background-repeat  : no-repeat;
+    width              : 100%;
+    height             : 100%;
+    background-size    : cover;
+    background-position: center;
+    background-image   : linear-gradient(to-bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), var(--img));
+}
+
+.movie-detail {
+    position       : absolute;
+    top            : 200px;
+    display        : flex;
+    justify-content: space-around;
+    width          : 100%;
+}
+
+.movie-title {
+    color      : black;
+    display    : flex;
+    align-items: center;
+}
