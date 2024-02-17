@@ -22,6 +22,10 @@
     /* Change to your desired active link color */
 }
 
+.navbar-nav {
+    margin: 0 20px;
+}
+
 /* Responsiveness - collapse Navbar on smaller screens */
 @media (max-width: 991px) {
     .navbar-nav {
@@ -63,7 +67,7 @@ a strong {
 
 #navbarNav {
     display         : flex;
-    justify-content : center;
+    justify-content : space-between;
     align-items     : center;
     background-color: #006632;
 }
@@ -96,4 +100,5 @@ a strong {
 .dropdown-toggle::after {
     vertical-align: 0.155em !important;
     margin-left   : 0.55em !important;
+    color         : white !important;
 }

@@ -1,0 +1,95 @@
+.container2 {
+    width       : 80%;
+    margin-left : 10%;
+    margin-right: 10%;
+    height      : max-content;
+    display     : flex;
+}
+
+.note {
+    flex      : 1;
+    text-align: start;
+}
+
+.note h1 {
+    color     : #028e46;
+    margin-top: 40px;
+}
+
+.note hr {
+    color : #028e46;
+    border: solid 1px #028e46;
+}
+
+.note p {
+    font-weight: bolder;
+}
+
+.note li {
+    margin-top: 30px;
+}
+
+.note li::marker {
+    color    : #028e46;
+    font-size: 20px;
+}
+
+.bookingForm {
+    flex           : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.bookingForm form {
+    margin-top: 40px;
+    box-shadow: 0;
+}
+
+.bookingForm h1 {
+    color         : #028e46;
+    text-transform: uppercase;
+}
+
+.bookingForm form {
+    border-radius: 10px;
+    padding      : 30px 30px;
+    height       : max-content;
+    border       : solid 1px lightgray;
+    box-shadow   : 5px 4px 0px 1px lightgray;
+    margin-bottom: 40px;
+}
+
+.bookingForm input {
+    outline      : none !important;
+    border       : solid 1px lightgray !important;
+    border-radius: 5px;
+    margin-top   : 20px;
+    min-width    : 435px;
+    min-height   : 50px;
+    padding      : 0 10px;
+}
+
+.bookingForm textarea {
+    outline      : none !important;
+    border       : solid 1px lightgray !important;
+    border-radius: 5px;
+    margin-top   : 20px;
+    min-width    : 435px;
+    min-height   : 100px;
+    padding      : 10px 10px;
+}
+
+.booking-btn {
+    border          : none;
+    background-color: #028e46;
+    color           : #fff;
+    padding         : 10px 30px;
+    border-radius   : 22px;
+    text-transform  : uppercase;
+    min-width       : 180px;
+    min-height      : 46px;
+}
+
+.booking-btn:hover {
+    background-color: #f26625;
+}

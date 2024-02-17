@@ -3,8 +3,16 @@ import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import '../style/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const CustomNavbar = () => {
+    const navigate = useNavigate();
+    const userid = sessionStorage.getItem("id");
+
+    const handleLoginClick = () => {
+        navigate('/login');
+    };
+
     const [navbarVisible, setNavbarVisible] = useState(false);
 
     const handleShowNavbar = () => {
@@ -13,6 +21,15 @@ const CustomNavbar = () => {
 
     const handleHideNavbar = () => {
         setNavbarVisible(false);
+    };
+
+    const logout = () => {
+        sessionStorage.clear();
+        navigate("/");
+    };
+
+    const booking = () => {
+        navigate("/booking");
     };
 
     useEffect(() => {
@@ -49,7 +66,7 @@ const CustomNavbar = () => {
                 <Navbar.Collapse id="navbarNav" className={`collapse navbar-collapse`}>
                     <Nav className="navbar-nav">
                         <Nav.Item>
-                            <Nav.Link><strong>Trang chủ</strong></Nav.Link>
+                            <Nav.Link href='/'><strong>Trang chủ</strong></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href='#'><strong>Giới thiệu</strong></Nav.Link>
@@ -68,9 +85,27 @@ const CustomNavbar = () => {
                             <Nav.Link href="tel:0982730924"><strong>Liên hệ</strong></Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="nav-item" style={{ display: 'flex', alignItems: 'center' }}>
-                            <Button className="contact-btn">Đặt lịch khám</Button>
+                            <Button onClick={booking} className="contact-btn">Đặt lịch khám</Button>
                         </Nav.Item>
                     </Nav>
+                    {userid ? (
+                        <NavDropdown title={<strong>Xin chào quý khách</strong>} id="servicesDropdown">
+                            <NavDropdown.Item>
+                                <Nav.Link href='#' style={{ color: 'black' }}>Hồ sơ</Nav.Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Nav.Link onClick={logout} style={{ color: 'black' }}>Đăng xuất</Nav.Link>
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                    ) : (
+                        <div>
+                            <Nav className="navbar-nav">
+                                <Nav.Item className="nav-item" style={{ display: 'flex', alignItems: 'center' }}>
+                                    <Button onClick={handleLoginClick} className="contact-btn">Đăng nhập</Button>
+                                </Nav.Item>
+                            </Nav>
+                        </div>
+                    )}
                 </Navbar.Collapse>
             )}
         </Navbar>
